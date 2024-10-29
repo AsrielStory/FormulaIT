@@ -6,7 +6,7 @@ increase = 0.05  # Ежемесячный рост цен
 minus = spend - salary  # Ежемесячный минус
 month_count = 0  # Прожитые месяцы без долгов
 
-while money_capital + salary - spend > 0:
+while money_capital + salary - spend >= 0:
     money_capital = money_capital + salary - spend  # Ежемесячное движение капитала
     spend *= 1 + increase  # Рост цен
     month_count += 1  # Добавление прожитого месяца без долгов
