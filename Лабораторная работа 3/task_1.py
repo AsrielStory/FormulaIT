@@ -1,9 +1,9 @@
-def find_index(list_of_items, item):
+def find_index(list_of_items, search_item):
     """Функция по поиску индекса товара в списке товаров"""
     items_index = None  # Индекс искомого предмета, None в случае отсутствия
-    for i in range(len(list_of_items)):
-        if list_of_items[i] == item:
-            items_index = i
+    for index, item in enumerate(list_of_items):
+        if item == search_item:
+            items_index = index
             break
     return items_index
 

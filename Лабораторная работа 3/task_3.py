@@ -2,9 +2,9 @@ def count_letters(text):
     """Функция по поиску числа букв в тексте"""
     text = text.lower()
     count = dict()
-    for letter in set(text):
+    for letter in text:
         if letter.isalpha():
-            count[letter] = text.count(letter)
+            count[letter] = count.get(letter, 0) + 1
     return count
 
 
