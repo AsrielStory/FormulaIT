@@ -11,8 +11,7 @@ def task() -> None:
     data = []
     with open(INPUT_FILENAME, 'r', encoding='UTF-8') as file:
         input_data = csv.DictReader(file, delimiter=',', lineterminator='\n')
-        for item in input_data:
-            data.append(item)
+        [data.append(item) for item in input_data]
 
     with open(OUTPUT_FILENAME, 'w', encoding='UTF-8') as file:
         json.dump(data, file, indent=4)
